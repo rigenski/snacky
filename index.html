@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYTHONS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="front">
+        <div class="logo">
+          <div class="brand">
+            <h1>PYTHON</h1>
+            <img src="img/logo-pythons.png" alt="" />
+          </div>
+        </div>
+        <div class="card">
+          <h2>Instruction</h2>
+          <h4>1. Input your name and click Start</h4>
+          <h4>2. Arraw Key for Control : Left, Up, Right, Down</h4>
+          <h4>3. Click Rewind</h4>
+          <div class="form">
+            <input type="text" id="input" />
+            <button id="start" disabled>Start</button>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <header>
+          <h2>Score : <span id="score">0</span></h2>
+          <div class="brand">
+            <h1>PYTHON</h1>
+            <img src="img/logo-pythons.png" alt="" />
+          </div>
+          <h2>
+            Time : <span id="minute">00</span>:<span id="second">00</span>
+          </h2>
+        </header>
+        <canvas id="map" width="960" height="600"></canvas>
+        <footer>
+          <input type="range" min="0" max="5" value="5" id="range" />
+          <div class="btn">
+            <button id="rewind">Rewind</button>
+            <button id="cancel">Cancel</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
