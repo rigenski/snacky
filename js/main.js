@@ -1,6 +1,6 @@
 $(document).ready(function () {
   /**
-   * Prepae
+   * Prepare
    */
   var start_x = 23;
   var start_y = 15;
