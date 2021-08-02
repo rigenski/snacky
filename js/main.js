@@ -80,7 +80,7 @@ $(document).ready(function () {
    * Run Game
    */
   function paint() {
-    ctx.fillStyle = "#ecf0f1"; // warna papap
+    ctx.fillStyle = "#ecf0f1"; // warna papan
     ctx.fillRect(0, 0, width, height);
     ctx.strokeStyle = "#2c4e50"; // warna tepi papan
     ctx.strokeRect(0, 0, width, height);
@@ -111,9 +111,9 @@ $(document).ready(function () {
       nx = 0;
     }
     if (ny < 0) {
-      ny = (width - size) / size;
+      ny = (height - size) / size;
     }
-    if (ny > (width - size) / size) {
+    if (ny > (height - size) / size) {
       ny = 0;
     }
 
