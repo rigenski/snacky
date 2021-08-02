@@ -163,9 +163,9 @@ $(document).ready(function () {
   }
 
   function paint_cell(x, y) {
-    ctx.fillStyle = "#1abc9c";
+    ctx.fillStyle = "#FFE227";
     ctx.fillRect(x * size, y * size, size, size);
-    ctx.strokeStyle = "#ecf0fq";
+    ctx.strokeStyle = "#2d3748    ";
     ctx.strokeRect(x * size, y * size, size, size);
   }
 
