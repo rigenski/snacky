@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #e2e8f0;
 }
 
@@ -10,19 +10,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #2d3748;
+  background-color: #1d2c3b;
 }
 
 /** MAIN */
 header {
   display: flex;
-  padding: 0 4em;
+  padding: 0 4rem 0.8rem;
   justify-content: space-between;
   align-items: center;
 }
 
 header h2 {
-  font-size: 2em;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .brand {
@@ -31,20 +32,23 @@ header h2 {
 }
 
 .brand h1 {
-  font-size: 4em;
+  font-size: 3.8rem;
+
+  font-family: "Times New Roman", Times, serif;
 }
 
 .brand img {
-  height: 3.4em;
+  height: 3.2rem;
 }
 
 footer {
   display: block;
-  padding: 0 4em;
+  padding: 0.8rem 4rem 0;
 }
 
 footer input {
   width: 100%;
+  margin-bottom: 0.2rem;
 }
 
 footer .btn {
@@ -54,17 +58,23 @@ footer .btn {
 }
 
 footer .btn button {
-  font-size: 1.8em;
-  padding: 0.6em 1em;
-  margin: 0.2em 0.4em;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem 3.6rem;
+  margin: 0.2rem 0.4rem;
   border-radius: 100px;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer .btn button:hover {
+  transform: scale(0.96);
 }
 
 #rewind {
   color: #e2e8f0;
-  background-color: #ed1c24;
+  background-color: #0779e4;
 }
 
 #cancel {
@@ -77,41 +87,50 @@ footer .btn button {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0.8rem;
 }
 
 .card * {
-  color: #2d3748;
+  color: #1d2c3b;
 }
 
 .card {
-  padding: 1.4em;
+  padding: 1.6rem;
   background-color: #e2e8f0;
   border-radius: 16px;
 }
 
 .card h2 {
-  margin-bottom: 0.8em;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
-.card h4 {
-  margin-bottom: 0.4em;
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
 }
 
 .form {
-  margin-top: 2em;
+  margin-top: 2rem;
   display: flex;
 }
 
 #input {
   width: 100%;
-  height: 2.4em;
+  height: 2.4rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 
 #start {
-  padding: 0 1.2em;
+  padding: 0 1.6rem;
   background-color: #5d96d4;
   border: none;
+  font-size: 1.2rem;
   color: #e2e8f0;
+  border-radius: 0 0.4rem 0.4rem 0;
   cursor: pointer;
   transition: 1s;
 }

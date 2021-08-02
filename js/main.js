@@ -8,6 +8,9 @@ $(document).ready(function () {
   var size = 20;
   var speed = 250;
   var btn = "right";
+  var snakeColor = "#FFE227";
+  var foodColor = "#29BB89";
+  var border = "#1d2c3b";
   var snake = [];
   var food;
 
@@ -135,10 +138,10 @@ $(document).ready(function () {
     for (var i = 0; i < snake.length; i++) {
       var c = snake[i];
 
-      paint_cell(c.x, c.y);
+      paint_cell({ x: c.x, y: c.y, fill: snakeColor, stroke: border });
     }
 
-    paint_cell(food.x, food.y);
+    paint_cell({ x: food.x, y: food.y, fill: foodColor, stroke: border });
 
     /**
      * Snake Collision
@@ -162,10 +165,12 @@ $(document).ready(function () {
     }
   }
 
-  function paint_cell(x, y) {
-    ctx.fillStyle = "#FFE227";
+  function paint_cell(data) {
+    const { x, y, fill, stroke } = data;
+
+    ctx.fillStyle = fill;
     ctx.fillRect(x * size, y * size, size, size);
-    ctx.strokeStyle = "#2d3748    ";
+    ctx.strokeStyle = stroke;
     ctx.strokeRect(x * size, y * size, size, size);
   }
 
