@@ -7,17 +7,17 @@ $(document).ready(function () {
   var length = 6;
   var size = 20;
   var speed = 250;
-  var btn = "right";
-  var snakeColor = "#FFE227";
-  var foodColor = "#29BB89";
-  var border = "#1d2c3b";
+  var btn = 'right';
+  var snakeColor = '#FFE227';
+  var foodColor = '#29BB89';
+  var border = '#1d2c3b';
   var snake = [];
   var food;
 
-  var map = $("#map")[0];
-  var ctx = map.getContext("2d");
-  var width = $("#map").width();
-  var height = $("#map").height();
+  var map = $('#map')[0];
+  var ctx = map.getContext('2d');
+  var width = $('#map').width();
+  var height = $('#map').height();
 
   /**
    * Init
@@ -30,19 +30,19 @@ $(document).ready(function () {
     game = setInterval(paint, speed);
   }
 
-  $("#main").hide();
-  $("#cancel").hide();
-  $("#range").hide();
+  $('#main').hide();
+  $('#cancel').hide();
+  $('#range').hide();
 
-  $("#input").keyup(function (e) {
-    if (e.target.value !== "") {
-      $("#start").removeAttr("disabled");
+  $('#input').keyup(function (e) {
+    if (e.target.value !== '') {
+      $('#start').removeAttr('disabled');
     }
   });
 
-  $("#start").click(function () {
-    $("#main").show();
-    $("#front").hide();
+  $('#start').click(function () {
+    $('#main').show();
+    $('#front').hide();
     init();
   });
 
@@ -52,11 +52,11 @@ $(document).ready(function () {
   function create_time() {
     var sec = 0;
     function pad(val) {
-      return val > 9 ? val : "0" + val;
+      return val > 9 ? val : '0' + val;
     }
     time = setInterval(function () {
-      $("#second").html(pad(++sec % 60));
-      $("#minute").html(pad(parseInt(sec / 60)));
+      $('#second').html(pad(++sec % 60));
+      $('#minute').html(pad(parseInt(sec / 60)));
     }, 1000);
   }
 
@@ -83,9 +83,9 @@ $(document).ready(function () {
    * Run Game
    */
   function paint() {
-    ctx.fillStyle = "#ecf0f1"; // warna papan
+    ctx.fillStyle = '#e5e7eb'; // warna papan
     ctx.fillRect(0, 0, width, height);
-    ctx.strokeStyle = "#2c4e50"; // warna tepi papan
+    ctx.strokeStyle = '#2c4e50'; // warna tepi papan
     ctx.strokeRect(0, 0, width, height);
 
     /**
@@ -94,13 +94,13 @@ $(document).ready(function () {
     var nx = snake[0].x;
     var ny = snake[0].y;
 
-    if (btn == "right") {
+    if (btn == 'right') {
       nx++;
-    } else if (btn == "left") {
+    } else if (btn == 'left') {
       nx--;
-    } else if (btn == "bottom") {
+    } else if (btn == 'bottom') {
       ny++;
-    } else if (btn == "up") {
+    } else if (btn == 'up') {
       ny--;
     }
 
@@ -148,9 +148,10 @@ $(document).ready(function () {
      */
     for (var i = 1; i < snake.length; i++) {
       if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-        alert(
-          "Game Over. Your Highscore: " + localStorage.getItem("highscore")
-        );
+        $('.modal').css('display', 'block');
+        $('#end-score').html(snake.length);
+        $('#end-highscore').html(localStorage.getItem('highscore'));
+
         clearInterval(game);
         clearInterval(time);
       }
@@ -159,9 +160,9 @@ $(document).ready(function () {
     /**
      * Update Score
      */
-    $("#score").html(snake.length);
-    if (localStorage.getItem("highscore") < snake.length) {
-      localStorage.setItem("highscore", snake.length);
+    $('#score').html(snake.length);
+    if (localStorage.getItem('highscore') < snake.length) {
+      localStorage.setItem('highscore', snake.length);
     }
   }
 
@@ -179,29 +180,29 @@ $(document).ready(function () {
    */
   $(document).keydown(function (e) {
     var key = e.which;
-    if (key == "37" && btn != "right") {
-      btn = "left";
-    } else if (key == "38" && btn != "bottom") {
-      btn = "up";
-    } else if (key == "39" && btn != "left") {
-      btn = "right";
-    } else if (key == "40" && btn != "up") {
-      btn = "bottom";
+    if (key == '37' && btn != 'right') {
+      btn = 'left';
+    } else if (key == '38' && btn != 'bottom') {
+      btn = 'up';
+    } else if (key == '39' && btn != 'left') {
+      btn = 'right';
+    } else if (key == '40' && btn != 'up') {
+      btn = 'bottom';
     }
   });
 
   /**
    * Rewind
    */
-  $("#rewind").click(function () {
-    $("#cancel").show();
-    $("#range").show();
-    $("#rewind").hide();
+  $('#rewind').click(function () {
+    $('#cancel').show();
+    $('#range').show();
+    $('#rewind').hide();
   });
 
-  $("#cancel").click(function () {
-    $("#rewind").show();
-    $("#range").hide();
-    $("#cancel").hide();
+  $('#cancel').click(function () {
+    $('#rewind').show();
+    $('#range').hide();
+    $('#cancel').hide();
   });
 });

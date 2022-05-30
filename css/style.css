@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Helvetica, sans-serif;
   color: #e2e8f0;
 }
 
@@ -10,15 +10,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1d2c3b;
+  background-color: #1f2937;
 }
 
-/** MAIN */
+/* HEADER */
+
 header {
   display: flex;
   padding: 0 4rem 0.8rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 header h2 {
@@ -28,6 +29,7 @@ header h2 {
 
 .brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -41,48 +43,9 @@ header h2 {
   height: 3.2rem;
 }
 
-footer {
-  display: block;
-  padding: 0.8rem 4rem 0;
-}
 
-footer input {
-  width: 100%;
-  margin-bottom: 0.2rem;
-}
+/* INSTRUCTION */
 
-footer .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-footer .btn button {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 1.2rem 3.6rem;
-  margin: 0.2rem 0.4rem;
-  border-radius: 100px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-footer .btn button:hover {
-  transform: scale(0.96);
-}
-
-#rewind {
-  color: #e2e8f0;
-  background-color: #0779e4;
-}
-
-#cancel {
-  color: #2d3748;
-  background-color: #e2e8f0;
-}
-
-/** FRONT */
 .logo {
   display: flex;
   justify-content: center;
@@ -90,24 +53,24 @@ footer .btn button:hover {
   padding-bottom: 0.8rem;
 }
 
-.card * {
+.instruction * {
   color: #1d2c3b;
 }
 
-.card {
+.instruction {
   padding: 1.6rem;
-  background-color: #e2e8f0;
-  border-radius: 16px;
+  background-color: #e5e7eb;
+  border-radius: 24px;
 }
 
-.card h2 {
+.instruction h2 {
   font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-.card p {
+.instruction p {
   font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
   font-weight: bold;
 }
 
@@ -116,25 +79,87 @@ footer .btn button:hover {
   display: flex;
 }
 
-#input {
+input {
   width: 100%;
   height: 2.4rem;
-  padding: 0.2rem 0.8rem;
+  padding: 0.2rem 1.2rem 0.4rem;
   font-size: 1.2rem;
-  border-radius: 0.4rem 0 0 0.4rem;
+  border-radius: 1rem 0 0 1rem;
+  border: none;
+  background: #d1d5db;
+}
+
+input:focus {
+  outline: none;
 }
 
 #start {
-  padding: 0 1.6rem;
+  padding: 0 2rem 0 1.6rem;
   background-color: #5d96d4;
   border: none;
   font-size: 1.2rem;
   color: #e2e8f0;
-  border-radius: 0 0.4rem 0.4rem 0;
+  border-radius: 0 1rem 1rem 0;
   cursor: pointer;
   transition: 1s;
 }
 
 #start:hover {
   background-color: #0069d9;
+}
+
+/* END */
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.end * {
+  color: #1d2c3b;
+}
+
+.end {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 1.6rem;
+  background-color: #e5e7eb;
+  border-radius: 24px;
+}
+
+.end h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.end p {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+}
+
+#restart {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem 2.4rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: #ef4444;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+#restart:hover {
+  background-color: #f87171;
 }

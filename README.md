@@ -1,7 +1,7 @@
-<h1 align="center"> PYTHONS </h1> <br>
+<h1 align="center"> SNACKY </h1> <br>
 <p align="center">
   <a href="https://snake-legend.netlify.app/">
-    <img alt="Pythons" title="Pythons" src="https://raw.githubusercontent.com/rygenzx/snake-legend/main/img/logo-pythons.png" width="120">
+    <img alt="Snacky" title="Snacky" src="https://raw.githubusercontent.com/rygenzx/snake-legend/main/img/logo-snacky.png" width="120">
   </a>
 </p>
 
@@ -21,7 +21,7 @@ This game only supports on the desktop display and run it with the arrow keys on
 
 ## Features
 
-A few of the things you can do with PYTHONS:
+A few of the things you can do with SNACKY:
 
 - Input player names
 - Check Highscore
