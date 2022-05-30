@@ -38,7 +38,7 @@ A few of the things you can do with SNACKY:
 ~ Clone or Download this repository
 
 ```
-    https://github.com/rygenzx/snake-legend
+    https://github.com/rygenzx/snacky
 ```
 
 ~ Open or Run `index.html` in the `snake-legend` folder
